@@ -1,0 +1,97 @@
+Ë
+    }b·fø  ã                   ó¢  — d dl mZ d dl mZ d dl mZ d dlZ ee«      Zej                  d«      d„ «       Zej                  d «      d„ «       Z	ej                  d	d
+d
+g¬«      d
+„ «       Z
+ej                  d«      d„ «       Z
+ej                  dd
+d
+g¬«      d„ «       Zej                  dd
+d
+g¬«      d„ «       Z
+ej                  dd
+d
+g¬«      d„ «       Zy)é    )ÚFlask©Úrender_template)Ú requestNú/c                  ó   — t        d«      S )Nz	home.htmlr   © ó    úPC:\Users\HP Pavilion\OneDrive\Desktop\Portfolio\Python\Flask using sqlite\app.pyÚhomer      s
+   € ä
+˜;Ó
+'Ð'r
+   z	/enternewc                  ó   — t        d«      S )Nzstudent.htmlr   r	   r
+   r
+   Úenternewr      s
+   € ä
+˜>Ó
+*Ð*r
+   z /addrecÚPOSTÚGET)Ú methodsc                  ó>  — t         j                  dk(  rÀ	 t         j                  d   } t         j                  d   }t         j                  d   }t         j                  d   }t         j                  d«      5 }|j
+                  «       }|j
+                  d | |||f«       |j                  «        d}d d d «       j                  «        t        d
+¬
+«      S y # 1 sw Y   Œ'xY w#  j                  «        d	}Y Œ@xY w# j                  «        t        d
+¬
+«      c cY S xY w)Nr   ÚnmÚaddÚcityÚzipú
+database.dbz=INSERT INTO students (name, addr, city, zip) VALUES (?,?,?,?)z%Record successfully added to databasezError in the INSERTú
+result.html©Úmsg©
+r   ÚmethodÚformÚ sqlite3Ú connectÚcursorÚ executeÚcommitÚrollbackÚcloser   ) r   Úaddrr   r   ÚconÚcurr   s           r
+   Úaddrecr(      sñ   € ô ‡~~˜Ò ð	:Ü—‘˜dÑ#ˆBÜ—<‘< Ñ&ˆDÜ—<‘< Ñ'ˆDÜ—,‘,˜uÑ%ˆCô —‘ Ó/ð 
+>°3Ø—j‘j“lØ—
+‘
+Ð[Ð]_ÐaeÐgkÐmpÐ\qÔrà—
+‘
+”Ø=÷
+
+>ð 
+I‰IŒKä" =°SÔ9Ð9ð+  ÷
+>ð 
+>ûð	(ØL‰LŒNØ'ŠCûð 
+I‰IŒKä" =°SÔ9Ô9ús0   •A!C! Á69CÂ/C! ÃC Ã C! Ã!C7Ã5C: Ã: Dz/listc                  óò   — t        j                  d«      } t         j                  | _        | j	                  «       }|j
+                  d«       |j
+                  «       }| j                  «        t        d|¬«      S )Nr   zSELECT rowid, * FROM studentsz	list.html©Úrows)	r   r   ÚRowÚ
+row_factoryr    r!   Úfetchallr$   r   )r&   r'   r+   s      r
+   Úlistr/   3   sV   € ô 
+/‰/˜-Ó
+(€CÜ—k‘k€C„Oà
+
+*‰*‹,€CØ ‡KKÐ/Ô0à
+<‰<‹>€DØ ‡II„Kä
+˜;¨DÔ
+1Ð1r
+   z/editc                  ó¤  — t         j                  dk(  r	 t         j                  d   } t         j                  d«      }t        j
+                  |_        |j                  «       }|j                  d| z   «       |j                  «       }j                  «        t        d¬«      S y #  d } Y Œ$xY w# j                  «        t        d¬«      c cY S xY w) Nr   Úidr   z,SELECT rowid, * FROM students WHERE rowid = z	edit.htmlr*   )r   r   r   r   r   r,   r-   r    r!   r.   r$   r   )r1   r&   r'   r+   s       r
+   Úeditr2   C   s¢   € ä ‡~~˜Ò ð	:ä—‘˜dÑ#ˆBä—/‘/ -Ó0ˆCÜ%Ÿk™kˆCŒOà—*‘*“,ˆCØK‰KÐFÈÑKÔLà—<‘<“>ˆDð 
+I‰IŒKä" ;°DÔ9Ð9ð#  øð	ØŠBûàI‰IŒKä" ;°DÔ9Ô9ús   •A1B$ Â$B*Â(B- Â- Cz/editrecc                  óÆ  — t         j                  dk(  ré	 t         j                  d   } t         j                  d   }t         j                  d   }t         j                  d   }t         j                  d   }t         j                  d «      5 }|j
+                  «       }|j
+                  d|z   d	z   |z   d
+z   |z   d
+z   |z   dz   | z   «       |j                  «        d
+} d d d «       j                  «        t        d ¬«      S y # 1 sw Y   Œ'xY w#  j                  «        dz   dz   z   dz   z   dz   z   dz    z   } Y Œ[xY w# j                  «        t        d ¬«      c cY S xY w)Nr   Úrowidr   r   r   r   r   zUPDATE students SET name='z	', addr='z	', city='z', zip='z' WHERE rowid=z*Record successfully edited in the databasez,Error in the Edit: UPDATE students SET name=z , addr=z , city=z, zip=z
+ WHERE rowid=r   r   r   )r4   r   r%   r   r   r&   r'   r   s           r
+   Ú editrecr5   Y   sk  € ô ‡~~˜Ò ð	:ä—L‘L Ñ)ˆEÜ—‘˜dÑ#ˆBÜ—<‘< Ñ&ˆDÜ—<‘< Ñ'ˆDÜ—,‘,˜uÑ%ˆCô —‘ Ó/ð 
+C°3Ø—j‘j“lØ—
+‘
+Ð8¸Ñ;¸KÑGÈÑLÈ[ÑXÐY]Ñ]Ð^hÑhÐilÑlÐm}Ñ}ð  Dñ  Dô  Eà—
+‘
+”ØB÷
+
+Cð 
+I‰IŒKä" =°SÔ9Ð9ð/  ÷
+Cð 
+Cûð	EØL‰LŒNØ@ÀÑCÀIÑMÈdÑRÐS\Ñ\Ð]aÑaÐbjÑjÐknÑnÐo~Ñ~ð  @Eñ  EŠCûð 
+I‰IŒKä" =°SÔ9Ô9ús1   •A4D
+ Â	AC>ÃD
+ Ã>D  Ä D
+ Ä
+/D;Ä9D> Ä> E z /deletec                  óÈ  — t         j                  dk(  r…	 t         j                  d   } t         j                  d«      5 }|j
+                  «       }|j
+                  d| z   «       |j                  «        d}d d d «       j                  «        t        d ¬«      S y # 1 sw Y   Œ'xY w#  j                  «        d}Y Œ@xY w# j                  «        t        d ¬«      c cY S xY w)	Nr   r1   r   z!DELETE FROM students WHERE rowid=z-Record successfully deleted from the databasezError in the DELETEr   r   r   )r4   r&   r'   r   s       r
+   Údeleter7   v   s½   € ä ‡~~˜Ò ð	:ä—L‘L Ñ&ˆEä—‘ Ó/ð 
+J°3ØŸ*™*›,CØ—K‘KÐ CÀEÑ IÔJà—J‘J”LØIC÷
+
+Jð 
+I‰IŒKä" =°SÔ9Ð9ð%  ÷
+
+Jð 
+Jûð	(ØL‰LŒNØ'ŠCûð 
+I‰IŒKä" =°SÔ9Ô9ús.   •(B& ½7BÁ4B& ÂB# Â B& Â&B<Â:B? Â? C!)Úflaskr   r   r   r   Ú__name__ÚappÚrouter   r   r(   r/   r2   r5   r7   r	   r
+   r
+   ú<module>r<      s  ðõ Ý !Ý Û á
+ˆHƒo€ð ‡ˆ3ƒñ(ó ð(ð ‡ˆ;Óñ+ó ð+ð ‡ˆ9 ¨ €Ó0ñ:ó 1ð:ð4 ‡ˆ7Óñ2ó ð2ð ‡ˆ7˜V E˜N€Ó+ñ:ó ,ð:ð* ‡ˆ:  u˜~€Ó.ñ:ó /ð:ð8 ‡ˆ9˜v e˜n€Ó-ñ:ó .ñ:r
+   
